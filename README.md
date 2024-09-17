@@ -1,4 +1,4 @@
-# CalculadoraPlus
+# Calculadora Plus
 
 **CalculadoraPlus** é um projeto de calculadora interativa que oferece tanto funcionalidades de uma calculadora científica quanto de uma calculadora simples. O objetivo deste projeto é fornecer uma ferramenta prática para cálculos matemáticos básicos e avançados.
 
