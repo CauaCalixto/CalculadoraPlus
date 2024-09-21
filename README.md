@@ -35,17 +35,5 @@ Para utilizar o **CalculadoraPlus**, você precisará ter o Python instalado em 
 
 
   ** Exemplo de saída para uma operação simples (adição):
-      ─────────────────────────────────
-    |     Operações Disponíveis       |
-    ─────────────────────────────────
-    | 1. Adição                       |
-    | 2. Subtração                    |
-    | 3. Multiplicação                |
-    | 4. Divisão                      |
-    | 5. Voltar ao Menu Principal     |
-    ─────────────────────────────────
-    Escolha a operação para realizar: 1
-    Número 1: 5
-    Número 2: 10
-    Realizando o cálculo...
-    A soma: 5 + 10 = 15.000
+   ![image](https://github.com/user-attachments/assets/4a5cfa91-78c6-4317-b4d1-4f7addfda80b)
+
