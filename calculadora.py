@@ -44,6 +44,7 @@ def mostrar_menu_calculadora_simples():
     | 5. Voltar ao Menu Principal     |
     ─────────────────────────────────
     ''')
+
 def mostrar_menu_formas_geometricas():
     '''Exibindo o menu de formas geometricas'''
     print('''
@@ -60,69 +61,71 @@ def mostrar_menu_formas_geometricas():
     | 8. Héxagono regular           |
     | 9. Sair                       |
     ─────────────────────────────────''')
+
+# Funções para cálculo de formas geométricas, agora com duas casas decimais
 def calcular_triângulo(base, altura):
     area = base * altura / 2
     print("Realizando operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
 def calcular_circulo(raio):
     area = math.pi * raio ** 2
     print("Realizando Operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
 def calcular_quadrado(lado):
-    area = lado * lado * 2
+    area = lado * lado
     print("Realizando operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
 def calcular_retangulo(base, altura):
     area = base * altura
-    print("Realizando operação")
+    print("Realizando operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
 def calcular_trapezio(base_maior, base_menor, altura):
     area = (base_maior + base_menor) * altura / 2
     print("Realizando Operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
 def calcular_losango(diagonal_maior, diagonal_menor):
     area = diagonal_maior * diagonal_menor / 2
     print("Realizando operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
 def calcular_paralelograma(base, altura):
     area = base * altura
-    print("Realizando operação....")
+    print("Realizando operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
 def calcular_hexagono(lado):
     area = (3 * math.sqrt(3) * lado ** 2) / 2
-    print("Realizando operação....")
+    print("Realizando operação...")
     time.sleep(0.5)
-    return area
+    return round(area, 2)
 
-
+# Funções para cálculos científicos com duas casas decimais
 def calcular_seno(numero):
     print("Realizando a operação...")
-    time.sleep(0.5)  # Pausa de 0.5 segundos
-    return math.sin(numero)
+    time.sleep(0.5)
+    return round(math.sin(numero), 2)
 
 def calcular_tangente(numero):
     print("Realizando a operação...")
-    time.sleep(0.5)  # Pausa de 0.5 segundos
-    return math.tan(numero)
+    time.sleep(0.5)
+    return round(math.tan(numero), 2)
 
 def calcular_cosseno(numero):
     print("Realizando a operação...")
-    time.sleep(0.5)  # Pausa de 0.5 segundos
-    return math.cos(numero)
+    time.sleep(0.5)
+    return round(math.cos(numero), 2)
 
 def calculadora_cientifica():
     """
@@ -133,20 +136,19 @@ def calculadora_cientifica():
         try:
             escolha_funcao = int(input("Escolha a função para realizar a operação: "))
             if escolha_funcao == 4:
-                break  # Finaliza e volta ao menu principal
+                break
             if escolha_funcao in [1, 2, 3]:
                 try:
                     numero = float(input("Número: "))
                     if escolha_funcao == 1:
                         resultado = calcular_seno(numero)
-                        print(f"Após realizar o cálculo de {numero}, o seno é: {resultado:.4f}")
+                        print(f"Seno({numero}) = {resultado:.2f}")
                     elif escolha_funcao == 2:
                         resultado = calcular_cosseno(numero)
-                        print(f"Após realizar o cálculo de {numero}, o cosseno é: {resultado:.4f}")
+                        print(f"Cosseno({numero}) = {resultado:.2f}")
                     elif escolha_funcao == 3:
                         resultado = calcular_tangente(numero)
-                        print(f"Após realizar o cálculo de {numero}, a tangente é: {resultado:.4f}")
-                    
+                        print(f"Tangente({numero}) = {resultado:.2f}")
                 except ValueError:
                     print("Número inválido. Por favor, insira um número válido.")
             else:
@@ -163,28 +165,24 @@ def calculadora_simples():
         try:
             escolha_funcao = int(input("Escolha a operação para realizar: "))
             if escolha_funcao == 5:
-                break  # Volta ao menu principal
+                break
             if escolha_funcao in [1, 2, 3, 4]:
                 try:
                     numero1 = float(input("Número 1: "))
                     numero2 = float(input("Número 2: "))
                     if escolha_funcao == 1:
                         resultado = numero1 + numero2
-                        print("Realizando o cálculo...")
-                        print(f"A soma: {numero1} + {numero2} = {resultado:.3f}")
+                        print(f"Soma: {numero1} + {numero2} = {resultado:.2f}")
                     elif escolha_funcao == 2:
                         resultado = numero1 - numero2
-                        print("Realizando o cálculo...")
-                        print(f"{numero1} - {numero2} = {resultado:.3f}")
+                        print(f"{numero1} - {numero2} = {resultado:.2f}")
                     elif escolha_funcao == 3:
                         resultado = numero1 * numero2
-                        print("Realizando o cálculo...")
-                        print(f"{numero1} * {numero2} = {resultado:.3f}")
+                        print(f"{numero1} * {numero2} = {resultado:.2f}")
                     elif escolha_funcao == 4:
                         if numero2 != 0:
                             resultado = numero1 / numero2
-                            print("Realizando a divisão...")
-                            print(f"A divisão: {numero1} / {numero2} = {resultado:.3f}")
+                            print(f"{numero1} / {numero2} = {resultado:.2f}")
                         else:
                             print("Erro: Divisão por zero não é permitida.")
                 except ValueError:
@@ -195,78 +193,68 @@ def calculadora_simples():
             print("Opção inválida. Por favor, insira um valor inteiro.")
 
 def formas_geometricas():
-    '''Gerenciando as formas geometricas'''
+    '''Gerenciando as formas geométricas'''
     while True:
         try:
             mostrar_menu_formas_geometricas()
             escolher_opcao = int(input("Selecione uma opção: "))
             if escolher_opcao == 9:
-                break # Voltando ao menu 
+                break
             elif escolher_opcao == 1:
                 base = float(input("Base: "))
                 altura = float(input("Altura: "))
-                print(f"Àrea do Triângulo é: {calcular_triângulo(base, altura)}")
-
+                print(f"Área do Triângulo: {calcular_triângulo(base, altura):.2f}")
             elif escolher_opcao == 2:
                 raio = float(input("Raio: "))
-                print(f"Àrea do circulo:{calcular_circulo(raio)}")
-
+                print(f"Área do Círculo: {calcular_circulo(raio):.2f}")
             elif escolher_opcao == 3:
-                lado = int(input("Quantidade de lado: "))
-                print(f"Perímetro: {calcular_quadrado(lado)}")
-
+                lado = float(input("Lado: "))
+                print(f"Área do Quadrado: {calcular_quadrado(lado):.2f}")
             elif escolher_opcao == 4:
                 base = float(input("Base: "))
                 altura = float(input("Altura: "))
-                print(f"Àrea do Retângulo é: {calcular_retangulo(base, altura)}") 
-
+                print(f"Área do Retângulo: {calcular_retangulo(base, altura):.2f}")
             elif escolher_opcao == 5:
                 base_maior = float(input("Base maior: "))
                 base_menor = float(input("Base menor: "))
                 altura = float(input("Altura: "))
-                print(f"Àrea: {calcular_trapezio(base_maior, base_menor, altura)}")
-            
+                print(f"Área do Trapézio: {calcular_trapezio(base_maior, base_menor, altura):.2f}")
             elif escolher_opcao == 6:
                 diagonal_maior = float(input("Diagonal maior: "))
                 diagonal_menor = float(input("Diagonal menor: "))
-                print(f"Àrea: {calcular_losango(diagonal_maior, diagonal_menor)}")
-            
+                print(f"Área do Losango: {calcular_losango(diagonal_maior, diagonal_menor):.2f}")
             elif escolher_opcao == 7:
                 base = float(input("Base: "))
                 altura = float(input("Altura: "))
-                print(f"Área: {calcular_paralelograma(base, altura)}")
-            
+                print(f"Área do Paralelogramo: {calcular_paralelograma(base, altura):.2f}")
             elif escolher_opcao == 8:
                 lado = float(input("Lado: "))
-                print(f"Área: {calcular_hexagono(lado)}")     
+                print(f"Área do Hexágono: {calcular_hexagono(lado):.2f}")
             else:
-                    print("Opção inválida")
-
+                print("Opção inválida.")
         except ValueError:
-            print("Opção inválida")
+            print("Por favor, insira um valor válido.")
 
-def escolher_opcao():
+def iniciar_calculadora():
     """
-    Permite ao usuário escolher entre calculadora científica ou simples.
+    Função principal que inicializa o programa e gerencia as escolhas do usuário.
     """
     while True:
         boas_vindas()
         try:
-            opcao = int(input("Escolha a opção: "))
-            if opcao == 1:
+            escolha = int(input("Escolha uma opção: "))
+            if escolha == 4:
+                print("Encerrando...")
+                break
+            elif escolha == 1:
                 calculadora_cientifica()
-            elif opcao == 2:
+            elif escolha == 2:
                 calculadora_simples()
-            elif opcao == 3:
+            elif escolha == 3:
                 formas_geometricas()
-            elif opcao == 4:
-                print("Até Logo...")
-                break # Finalizando Programa
             else:
-                print("Opção inválida. Tente novamente.")
+                print("Escolha inválida.")
         except ValueError:
-            print("Entrada inválida. Por favor, insira um valor inteiro.")
+            print("Por favor, insira um número válido.")
 
-# Inicializa o programa
-if __name__ == "__main__":
-    escolher_opcao()
+iniciar_calculadora()
