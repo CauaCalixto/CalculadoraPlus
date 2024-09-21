@@ -35,5 +35,7 @@ Para utilizar o **CalculadoraPlus**, você precisará ter o Python instalado em 
 
 
   ** Exemplo de saída para uma operação simples (adição):
-   ![image](https://github.com/user-attachments/assets/4a5cfa91-78c6-4317-b4d1-4f7addfda80b)
+  
+  
+  ![image](https://github.com/user-attachments/assets/4a5cfa91-78c6-4317-b4d1-4f7addfda80b)
 
